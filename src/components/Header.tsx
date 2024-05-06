@@ -1,5 +1,6 @@
 import * as Styled from "@/styles/Header";
 import SVGImage from "@/assets/home/surfbot-logo.svg";
+
 import Image from "next/image";
 
 export default function Header() {

@@ -11,6 +11,17 @@ const animate = keyframes({
   },
 });
 
+const background = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translate3d(-100px, 0, 0)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translate3d(0px, 0, 0)",
+  },
+});
+
 export const Header = styled("header", {
   img: {
     opacity: 0,
@@ -20,12 +31,13 @@ export const Header = styled("header", {
 });
 
 export const Container = styled("div", {
-  width: "92vw",
+  maxWidth: "92vw",
   margin: "0 auto",
 
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  flexWrap: "wrap",
 });
 
 export const Background = styled("div", {
@@ -34,6 +46,10 @@ export const Background = styled("div", {
 });
 
 export const Span = styled("span", {
+  opacity: 0,
+  animation: `${background} .72s forwards`,
+  animationDelay: "0.32s",
+
   fontFamily: "Nunito !important",
   fontWeight: "bold",
   color: "$white",
@@ -74,7 +90,7 @@ export const Menu = styled("div", {
   a: {
     fontFamily: "Nunito !important",
     fontWeight: "700",
-    fontSize: "$lg",
+    fontSize: "$md",
     color: "#fff",
     transition: ".3s  ease-in-out",
 

@@ -23,8 +23,8 @@ export const {
     },
     fontSizes: {
       sm: "0.875rem", // Font size -> 14px
-      md: "1.5rem", // Font size -> 24px
-      lg: "1.125rem", // Font size -> 18px
+      md: "1.125rem", // Font size -> 24px
+      lg: "1.5rem", // Font size -> 18px
       xlg: "4.5rem", // Font size -> 72px
     },
     colors: {

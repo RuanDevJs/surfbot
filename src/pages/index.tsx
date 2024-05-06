@@ -5,6 +5,7 @@ import { ArrowRight } from "phosphor-react";
 
 import BackgroundImage from "../assets/home/bg-intro.jpg";
 import Beach from "./components/Beach";
+import Lessons from "./components/Lessons";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         </Styled.Info>
       </Styled.Main>
       <Beach />
+      <Lessons />
     </div>
   );
 }

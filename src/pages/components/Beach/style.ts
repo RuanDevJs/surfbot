@@ -11,17 +11,6 @@ const animate = keyframes({
   },
 });
 
-const ImageAnimation = keyframes({
-  from: {
-    opacity: 0.72,
-    filter: "brightness(0.82)",
-  },
-  to: {
-    opacity: 1,
-    filter: "brightness(1)",
-  },
-});
-
 export const Container = styled("section", {
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
@@ -38,7 +27,7 @@ export const Pictures = styled("div", {
   opacity: 0,
 
   animation: `${animate} .72s forwards`,
-  animationDelay: "0.95s",
+  animationDelay: "0.32s",
 
   display: "flex",
   flexDirection: "column",
@@ -51,13 +40,6 @@ export const Locale = styled("div", {
   top: -120,
 
   cursor: "pointer",
-  transition: ".22s ease-in",
-
-  "&:hover": {
-    transform: "translateY(-5px)",
-    filter: "brightness(1.05)",
-    transition: ".22s ease-out",
-  },
 
   h2: {
     fontFamily: "$nunito",
@@ -118,7 +100,7 @@ export const Locale = styled("div", {
 export const Information = styled("div", {
   opacity: 0,
   animation: `${animate} .72s forwards`,
-  animationDelay: "0.95s",
+  animationDelay: "0.32s",
 
   h1: {
     fontFamily: "$alice",
@@ -137,7 +119,7 @@ export const Information = styled("div", {
   p: {
     fontFamily: "$nunito",
     fontWeight: "$nunito-regular",
-    fontSize: "$lg",
+    fontSize: "$md",
     color: "$dark_blue",
     marginBottom: "2rem",
     transition: "all .32s",

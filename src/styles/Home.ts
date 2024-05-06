@@ -50,7 +50,7 @@ export const Info = styled("div", {
   top: "22vw",
 
   animation: `${animate} .72s forwards`,
-  animationDelay: "0.95s",
+  animationDelay: "0.15s",
 
   h1: {
     fontSize: "$xlg",
