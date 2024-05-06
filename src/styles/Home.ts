@@ -35,6 +35,7 @@ export const Image = styled("img", {
   animationDelay: "0.15s",
 
   cursor: "pointer",
+  objectFit: "cover",
 });
 
 export const Info = styled("div", {
@@ -104,4 +105,46 @@ export const Button = styled("button", {
   alignItems: "center",
 
   gap: "8px",
+});
+
+export const Quote = styled("div", {
+  position: "relative",
+
+  ".image-quote:hover": {
+    position: "relative",
+    opacity: "0 !important",
+    zIndex: 100,
+  },
+
+  ".quote": {
+    width: "100%",
+    height: "100%",
+
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+
+    zIndex: 1,
+  },
+
+  ".quote h2": {
+    fontFamily: "$alice",
+    fontWeight: "$alice-regular",
+    fontSize: "$xlg",
+    color: "$white",
+    marginBottom: "1rem",
+  },
+
+  ".quote p": {
+    fontFamily: "$nunito",
+    fontWeight: "$nunito-bold",
+    fontSize: "$md",
+    color: "$white",
+    marginBottom: "1rem",
+  },
 });

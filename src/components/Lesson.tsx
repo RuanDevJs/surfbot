@@ -4,34 +4,53 @@ import Image from "next/image";
 import * as Styled from "@/styles/Lesson";
 import SurfbotIcon from "@/assets/home/surfbot-icon.svg";
 
-export default function Lesson() {
+interface IContent {
+  content: string;
+}
+
+interface IProps {
+  iconQuantity: number;
+  type: "INFANTIL" | "ADULTO" | "PROFISSIONAL";
+  content: string[];
+  price: string;
+}
+
+//let teste = Object.keys(new Array(3).fill(null))
+
+export default function Lesson({ iconQuantity, type, content, price }: IProps) {
+  const length = Object.keys(new Array(iconQuantity).fill(null));
+
   return (
     <Styled.Container>
       <Styled.Heading>
-        <Image
-          src={SurfbotIcon}
-          width={"100%"}
-          height={"100%"}
-          alt="Surfbot - Logo"
-        />
-        <h2>Infantil</h2>
+        <Styled.Icons>
+          {length.map((icon) => {
+            return (
+              <Image
+                key={icon}
+                src={SurfbotIcon}
+                width={"100%"}
+                height={"100%"}
+                alt="Surfbot - Logo"
+                className="surfbot-icon"
+              />
+            );
+          })}
+        </Styled.Icons>
+
+        <h2>{type}</h2>
       </Styled.Heading>
       <Styled.Content>
         <ul>
-          <li>
-            <p>Público entre 5 e 15 anos</p>
-          </li>
-          <li>
-            <p>Equipamentos fornecidos</p>
-          </li>
-          <li>
-            <p>Horários de Sex. à Sab.</p>
-          </li>
-          <li>
-            <p>2 horas seguidas de aula</p>
-          </li>
+          {content.map((contentValue, index) => {
+            return (
+              <li key={index}>
+                <p>{contentValue}</p>
+              </li>
+            );
+          })}
         </ul>
-        <h3>R$ 49,00 / Aula</h3>
+        <h3>R$ {price} / Aula</h3>
         <Styled.Button>
           <span>MATRICULE-SE</span>{" "}
           <ArrowRight size={18} weight="bold" color="#fff" />

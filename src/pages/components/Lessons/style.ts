@@ -1,4 +1,5 @@
 import { styled, keyframes } from "@/design";
+import { opacity } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 const animate = keyframes({
   from: {
@@ -24,6 +25,27 @@ const ImageAnimation = keyframes({
 
 export const Container = styled("section", {
   background: "#EFF4F9",
+  paddingBottom: "1rem",
+
+  ".description": {
+    position: "relative",
+    fontFamily: "$nunito",
+    fontWeight: "$nunito-regular",
+    fontSize: "$md",
+    color: "$gray",
+    textAlign: "center",
+
+    cursor: "pointer",
+    transition: "ease-in-out .32s",
+
+    paddingBottom: "2rem",
+  },
+
+  "p > span": {
+    display: "inline-block",
+    fontWeight: "$nunito-bold",
+    color: "$red",
+  },
 });
 
 export const Heading = styled("section", {

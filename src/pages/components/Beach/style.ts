@@ -20,7 +20,7 @@ export const Container = styled("section", {
   padding: "0 2rem",
   gap: "2rem",
 
-  margin: "3rem 0",
+  margin: "3rem 0 0 0",
 });
 
 export const Pictures = styled("div", {

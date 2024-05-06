@@ -9,6 +9,18 @@ const animateArrow = keyframes({
   },
 });
 
+const animateIcon = keyframes({
+  from: {
+    opacity: 0.82,
+    transform: "translate3d(0, -10px, 0)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translate3d(0, 0px, 0)",
+    filter: "brightness(1.2)",
+  },
+});
+
 export const Container = styled("div", {
   padding: "2rem",
   background: "$white",
@@ -31,6 +43,39 @@ export const Container = styled("div", {
   "&:hover button": {
     background: "$blue",
   },
+
+  "&:hover button svg": {
+    animation: `${animateArrow} .32s infinite alternate`,
+  },
+
+  // "&:nth-child(1) img": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".32s",
+  // },
+
+  // "&:nth-child(2) img:nth-child(1)": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".42s",
+  // },
+  // "&:nth-child(2) img:nth-child(2)": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".52s",
+  // },
+
+  // "&:nth-child(3) img:nth-child(1)": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".62s",
+  // },
+
+  // "&:nth-child(3) img:nth-child(2)": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".72s",
+  // },
+
+  // "&:nth-child(3) img:nth-child(3)": {
+  //   animation: `${animateIcon} .50s infinite alternate`,
+  //   animationDelay: ".82s",
+  // },
 });
 
 export const Heading = styled("div", {
@@ -53,6 +98,12 @@ export const Heading = styled("div", {
   },
 
   borderBottom: "3px solid #EFF4F9",
+});
+
+export const Icons = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  gap: "1rem",
 });
 
 export const Content = styled("div", {
