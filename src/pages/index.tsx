@@ -8,6 +8,7 @@ import QuoteImage from "../assets/home/foto-quote@2x.jpg";
 
 import Beach from "./components/Beach";
 import Lessons from "./components/Lessons";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           <p>Regis Pereira</p>
         </div>
       </Styled.Quote>
+      <Contact />
     </div>
   );
 }

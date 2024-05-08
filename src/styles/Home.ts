@@ -138,6 +138,12 @@ export const Quote = styled("div", {
     fontSize: "$xlg",
     color: "$white",
     marginBottom: "1rem",
+    textAlign: "center",
+    transition: "all .32s",
+
+    "&:hover": {
+      transform: "translate3d(0,-10px,0)",
+    },
   },
 
   ".quote p": {
@@ -146,5 +152,11 @@ export const Quote = styled("div", {
     fontSize: "$md",
     color: "$white",
     marginBottom: "1rem",
+
+    transition: "all .32s",
+
+    "&:hover": {
+      transform: "translate3d(0,-10px,0)",
+    },
   },
 });
