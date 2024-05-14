@@ -10,7 +10,7 @@ import FloaterSVG from "@/assets/home/boia.svg";
 
 export default function Beach() {
   return (
-    <Styled.Container>
+    <Styled.Container id="beach">
       <Styled.Pictures>
         <Image
           src={GalleryPicture}

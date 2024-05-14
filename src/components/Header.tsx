@@ -1,9 +1,28 @@
-import * as Styled from "@/styles/Header";
+import { MouseEvent, MouseEventHandler, useEffect, useRef } from "react";
 import SVGImage from "@/assets/home/surfbot-logo.svg";
 
 import Image from "next/image";
+import * as Styled from "@/styles/Header";
+import Link from "next/link";
 
 export default function Header() {
+  const navigationElement = useRef<HTMLDivElement>(null);
+
+  function handleClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (navigationElement.current && navigationElement.current !== null) {
+      event.preventDefault();
+
+      const href = event.currentTarget.getAttribute("href")!;
+      const getSectionById = document.getElementById(href.replace("#", ""));
+
+      const distanceFromTop = getSectionById?.offsetTop!;
+      window.scrollTo({
+        top: distanceFromTop - 220,
+        behavior: "smooth",
+      });
+    }
+  }
+
   return (
     <Styled.Header>
       <Styled.Background>
@@ -15,27 +34,35 @@ export default function Header() {
       </Styled.Background>
       <Styled.Heading>
         <Styled.Container>
-          <Image
-            src={SVGImage}
-            alt="Surfbot - Escola de surf"
-            width="100%"
-            height={50}
-            title="Surfbot - Escola de surf"
-            draggable={false}
-          />
-          <Styled.Menu>
+          <Link href="/">
+            <Image
+              src={SVGImage}
+              alt="Surfbot - Escola de surf"
+              width="100%"
+              height={50}
+              title="Surfbot - Escola de surf"
+              draggable={false}
+            />
+          </Link>
+          <Styled.Menu ref={navigationElement}>
             <ul>
               <li>
-                <a href="#beach">Praia</a>
+                <a href="#beach" onClick={(event) => handleClick(event)}>
+                  Praia
+                </a>
               </li>
               <li>
-                <a href="#lessons">Aulas</a>
+                <a href="#lessons" onClick={(event) => handleClick(event)}>
+                  Aulas
+                </a>
               </li>
               <li>
-                <a href="#contact">Contato</a>
+                <a href="#contact" onClick={(event) => handleClick(event)}>
+                  Contato
+                </a>
               </li>
               <li>
-                <a href="#register">Matricule-se</a>
+                <Link href="/register">Matricule-se</Link>
               </li>
             </ul>
           </Styled.Menu>

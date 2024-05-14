@@ -48,7 +48,7 @@ export const Container = styled("section", {
   },
 });
 
-export const Heading = styled("section", {
+export const Heading = styled("div", {
   position: "relative",
   top: -30,
 

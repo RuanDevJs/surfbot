@@ -44,6 +44,10 @@ export const Container = styled("div", {
     background: "$blue",
   },
 
+  "&:hover h2": {
+    color: "$blue",
+  },
+
   "&:hover button svg": {
     animation: `${animateArrow} .32s infinite alternate`,
   },

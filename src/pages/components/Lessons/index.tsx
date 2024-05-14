@@ -23,8 +23,9 @@ export default function Lessons() {
     "Horários de Sex. à Sab.",
     "4 horas seguidas de aula",
   ];
+
   return (
-    <Styled.Container>
+    <Styled.Container id="lessons">
       <Styled.Heading>
         <Image
           src={Waves}

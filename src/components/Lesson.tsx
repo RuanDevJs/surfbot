@@ -1,12 +1,8 @@
 import { ArrowRight } from "phosphor-react";
 import Image from "next/image";
 
-import * as Styled from "@/styles/Lesson";
 import SurfbotIcon from "@/assets/home/surfbot-icon.svg";
-
-interface IContent {
-  content: string;
-}
+import * as Styled from "@/styles/Lesson";
 
 interface IProps {
   iconQuantity: number;

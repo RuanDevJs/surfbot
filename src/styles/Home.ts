@@ -1,5 +1,4 @@
 import { styled, keyframes } from "@/design";
-import NextImage from "next/image";
 
 const animate = keyframes({
   from: {

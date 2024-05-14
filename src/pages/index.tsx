@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import * as Styled from "@/styles/Home";
 
@@ -9,6 +10,8 @@ import QuoteImage from "../assets/home/foto-quote@2x.jpg";
 import Beach from "./components/Beach";
 import Lessons from "./components/Lessons";
 import Contact from "./components/Contact";
+
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -44,6 +47,7 @@ export default function Home() {
         </div>
       </Styled.Quote>
       <Contact />
+      <Footer />
     </div>
   );
 }

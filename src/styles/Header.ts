@@ -60,7 +60,7 @@ export const Heading = styled("div", {
   padding: "1rem 0",
 });
 
-export const Menu = styled("div", {
+export const Menu = styled("nav", {
   ul: {
     display: "flex",
     alignItems: "center",

@@ -1,17 +1,11 @@
 import Image from "next/image";
 import * as Styled from "./style";
 
-import GalleryPicture from "@/assets/home/foto-galeria.jpg";
-import MapaPicture from "@/assets/home/mapa.jpg";
-
-import FootSVG from "@/assets/home/sandalhas.svg";
-import CoconutSVG from "@/assets/home/coco.svg";
-import FloaterSVG from "@/assets/home/boia.svg";
 import { ArrowRight } from "phosphor-react";
 
 export default function Contact() {
   return (
-    <Styled.Container>
+    <Styled.Container id="contact">
       <h1>Contato</h1>
       <Styled.Form>
         <Styled.Wrap>
